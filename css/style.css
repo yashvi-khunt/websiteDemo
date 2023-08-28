@@ -14,6 +14,10 @@ body {
   margin: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 a,
 ul,
 ol {
@@ -21,9 +25,9 @@ ol {
   text-decoration: none;
 }
 
-#button svg {
-  width: 1em;
-  height: 1em;
+#button svg{
+  width: 30px;
+  height: 30px;
 }
 
 #button,
@@ -50,11 +54,80 @@ ol {
 
 .main-header{
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
+  z-index: 999;
 }
 
-.main-slider, .main-slider img{
+.main-slider{
+  background-image: url("../images/slider-1.jpg");
+  background-repeat: no-repeat;
+  /* aspect-ratio: 5 / 2; */
+  /* width: 100%; */
+  /* object-fit: cover; */
+  background-position: center;
+  height: 80vh;
+  background-size: 100% 100%;
+}
+
+.slider-items{
   width: 100%;
-  /* aspect-ratio: 16/9; */
+  position: relative;
+}
+
+.slider-content{
+  /* width:30%; */
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  /* transform: translate(-50%,-50%); */
+}
+
+.slider-content .title{
+  width: 70%;
+  line-height: 1.2;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 2.5em;
+}
+
+.slider-content .desc{
+  width: 70%;
+  line-height: 25px;
+}
+
+.control-container{
+  width: 90%;
+  margin: auto;
+  position: absolute;
+  bottom : 75%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.main-control{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.main-control button{
+  cursor: pointer;
+  /* border-radius: 50%; */
+  outline: 0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+
+}
+.main-control button svg{
+  width: 30px;
+  height: 30px;
+  padding: 3px 4px 0 0;
+}
+
+.main-control .slider-next svg{
+  transform: rotate(180deg);
+  padding: 0 4px 3px 0;
 }
