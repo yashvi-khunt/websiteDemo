@@ -1,0 +1,60 @@
+:root {
+  --primary-color: #002d5b;
+  --second-color: #ff656a;
+  --white: #ffffff;
+  --dark: #506172;
+  --bgcolor: #f6f9fe;
+  --primary-font: "Rubik", sans-serif;
+  --second-font: "Sarabun", sans-serif;
+}
+
+*,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+ul,
+ol {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+#button svg {
+  width: 1em;
+  height: 1em;
+}
+
+#button,
+.navbar-toggler {
+  display: none;
+} /*# sourceMappingURL=style.css.map */
+
+.nav-inside,.nav-items{
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul{
+  padding: 0.5em;
+  display: flex;
+  gap: 0 1em;
+}
+
+.navbar ul li a{
+  color: var(--primary-color);
+}
+
+.main-header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.main-slider, .main-slider img{
+  width: 100%;
+  /* aspect-ratio: 16/9; */
+}
