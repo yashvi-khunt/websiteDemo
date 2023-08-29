@@ -14,6 +14,10 @@ body {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a,
 ul,
 ol {
@@ -22,39 +26,140 @@ ol {
 }
 
 #button svg {
-  width: 1em;
-  height: 1em;
+  width: 30px;
+  height: 30px;
 }
 
 #button,
 .navbar-toggler {
   display: none;
-} /*# sourceMappingURL=style.css.map */
+}
 
-.nav-inside,.nav-items{
+/*# sourceMappingURL=style.css.map */
+.nav-inside,
+.nav-items {
   padding: 0.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navbar ul{
+.navbar ul {
   padding: 0.5em;
   display: flex;
   gap: 0 1em;
 }
 
-.navbar ul li a{
+.navbar ul li a {
+  position: relative;
+  padding: 5px;
   color: var(--primary-color);
 }
+.navbar ul li a:after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  display: block;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-color: var(--second-color);
+  transition: 0.5s;
+}
 
-.main-header{
+.navbar ul li a:hover:after {
+  width: 100%;
+}
+.main-header {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 999;
+}
+.main-slider,
+.main-slider .carousel-item img {
+  /* background-image: url("../images/slider-1.jpg");
+  background-repeat: no-repeat; 
+  background-position: center;
+    height: 50vh;
+    background-size: 100% 100%;*/
+  width: 100%;
+  aspect-ratio: 5 / 2;
+  object-fit: cover;
+  position: relative;
+}
+/* .main-slider img{
+  width: 100%;
+} */
+
+.slider-items {
+  /* max-width: 1000px; */
+  width: 100%;
+
+  margin: auto;
 }
 
-.main-slider, .main-slider img{
-  width: 100%;
-  /* aspect-ratio: 16/9; */
+.slider-content {
+  margin: auto;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* align-items: center; */
+}
+
+.slider-content .title {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  line-height: 1.2em;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.slider-content .desc {
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  line-height: 25px;
+}
+
+.carousel-item {
+  display: none;
+}
+
+.main-control button svg {
+  width: 30px;
+  height: 30px;
+  padding: 3px 4px 0 0;
+  /* fill: white; */
+}
+
+.main-control .slider-next svg {
+  transform: rotate(180deg);
+  padding: 0 4px 3px 0;
+}
+
+.main-control {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-control button {
+  /* background: non; */
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.5s;
+  outline: 0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  fill: var(--primary-color);
 }
