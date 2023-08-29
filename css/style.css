@@ -14,10 +14,6 @@ body {
   margin: 0;
 }
 
-html{
-  scroll-behavior: smooth;
-}
-
 a,
 ul,
 ol {
@@ -25,7 +21,7 @@ ol {
   text-decoration: none;
 }
 
-#button svg{
+#button svg {
   width: 30px;
   height: 30px;
 }
@@ -33,98 +29,56 @@ ol {
 #button,
 .navbar-toggler {
   display: none;
-} /*# sourceMappingURL=style.css.map */
+}
 
-.nav-inside,.nav-items{
+/*# sourceMappingURL=style.css.map */
+.nav-inside,
+.nav-items {
   padding: 0.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navbar ul{
+.navbar ul {
   padding: 0.5em;
   display: flex;
   gap: 0 1em;
 }
 
-.navbar ul li a{
+.navbar ul li a {
+  position: relative;
+  padding: 5px;
   color: var(--primary-color);
 }
+.navbar ul li a:after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  display: block;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-color: var(--second-color);
+  transition: 0.5s;
+}
 
-.main-header{
+.navbar ul li a:hover:after {
+  width: 100%;
+}
+.main-header {
   width: 100%;
   position: absolute;
   top: 0;
-  z-index: 999;
 }
-
-.main-slider{
-  background-image: url("../images/slider-1.jpg");
-  background-repeat: no-repeat;
-  /* aspect-ratio: 5 / 2; */
-  /* width: 100%; */
-  /* object-fit: cover; */
-  background-position: center;
-  height: 80vh;
-  background-size: 100% 100%;
-}
-
-.slider-items{
+/* .main-slider img{
   width: 100%;
-  position: relative;
-}
+} */
 
-.slider-content{
-  /* width:30%; */
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  /* transform: translate(-50%,-50%); */
-}
-
-.slider-content .title{
-  width: 70%;
-  line-height: 1.2;
-  font-family: var(--primary-font);
-  font-weight: 500;
-  font-size: 2.5em;
-}
-
-.slider-content .desc{
-  width: 70%;
-  line-height: 25px;
-}
-
-.control-container{
-  width: 90%;
-  margin: auto;
-  position: absolute;
-  bottom : 75%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-.main-control{
-  display: flex;
-  justify-content: space-between;
+.slider-items {
+  /* max-width: 1000px; */
   width: 100%;
-}
-
-.main-control button{
-  cursor: pointer;
-  /* border-radius: 50%; */
-  outline: 0;
-  border: none;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-
-}
-.main-control button svg{
-  width: 30px;
-  height: 30px;
-  padding: 3px 4px 0 0;
+  /* aspect-ratio: 16/9; */
 }
 
 .main-control .slider-next svg{
