@@ -234,7 +234,8 @@ ol {
   padding: 2em;
   text-align: center;
   /* background: var(--primary-color); */
-  background-color: rgba(255, 255, 255, 0.8);
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  background-color: beige;
 }
 
 .counter .container {
@@ -376,7 +377,7 @@ ol {
 
 .our-serivces-main {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -401,7 +402,7 @@ ol {
 
 .our-serivces-items img {
   /* width: 100%; */
-  /* height: 100%; */
+  height: 100%;
   object-fit: fill;
   /* display: flex; */
 }
@@ -423,7 +424,7 @@ ol {
   font-weight: 400;
 }
 
-/* this is hover propoerty for cards, on hover apply thid and change font weigth to 700  */
+/* this is hover propoerty for cards, on hover apply thid and change font weigth to 700 and cursor pointer */
 .serivces-content-hover {
   /* font-weight: 700; */
   /* .serivces-content:hover { */
@@ -435,10 +436,49 @@ ol {
   color: white;
   align-items: center;
   justify-content: center;
+}
+
+.newsletter-inside {
+  /* width: 100%; */
+  /* margin: 0 auto; */
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.newsletter-inside h1 {
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  /* align-items: baseline; */
+}
+
+.newsletter-inside input,
+.newsletter-inside button {
+  background: transparent;
+  border: none;
+  outline: 1px solid black;
+  height: 45px;
+  padding-left: 15px;
+  font-size: 15px;
+}
+
+.newsletter-inside button {
+  background-color: var(--second-color);
+  color: beige;
+  padding: 15px;
   cursor: pointer;
 }
 
-.newsletter {
-  /* width: 100%; */
-  background: #cde1f8;
+.form-row button:hover {
+  background-color: var(--primary-color);
+}
+
+.updates .container {
+  background: var(--bgcolor);
 }
