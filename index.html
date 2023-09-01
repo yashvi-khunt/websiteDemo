@@ -32,7 +32,7 @@
     <!-- Main Header Here-->
     <header class="main-header">
       <div class="container">
-        <div class="nav-inside navbar-scroll">
+        <div class="nav-inside">
           <div class="nav-items">
             <a class="navbar-logo" href="index.html">
               <img
@@ -80,36 +80,36 @@
             </button>
           </div>
           <nav class="navbar" id="navbar_top">
-            <!-- <div class="collapse navbar-collapse" id="main_nav"> -->
-            <ul class="navbar-items">
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="index.html"
-                  itemscope=""
-                  itemtype="https://www.schema.org/SiteNavigationElement"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="about.html"
-                  itemscope=""
-                  itemtype="https://www.schema.org/SiteNavigationElement"
-                  >About Us</a
-                >
-              </li>
-              <li class="nav-item dropdown has-megamenu categorylist">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  data-toggle="dropdown"
-                  itemscope=""
-                  itemtype="https://www.schema.org/SiteNavigationElement"
-                  >Products
-                </a>
-                <!-- <div class="dropdown-menu">
+            <div class="collapse navbar-collapse" id="main_nav">
+              <ul class="navbar-items">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="index.html"
+                    itemscope=""
+                    itemtype="https://www.schema.org/SiteNavigationElement"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="about.html"
+                    itemscope=""
+                    itemtype="https://www.schema.org/SiteNavigationElement"
+                    >About Us</a
+                  >
+                </li>
+                <li class="nav-item dropdown has-megamenu categorylist">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-toggle="dropdown"
+                    itemscope=""
+                    itemtype="https://www.schema.org/SiteNavigationElement"
+                    >Products
+                  </a>
+                  <!-- <div class="dropdown-menu">
                       <a class="dropdown-item" href="productdetails.html"
                         >lorem ipsum Dolor</a
                       >
@@ -126,38 +126,38 @@
                         >lorem ipsum Dolor</a
                       >
                     </div> -->
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="update-page-1.html"
-                  itemscope=""
-                  itemtype="https://www.schema.org/SiteNavigationElement"
-                  >Updates</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="gallery.html"
-                  itemscope=""
-                  itemtype="https://www.schema.org/SiteNavigationElement"
-                  >Gallery</a
-                >
-              </li>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="update-page-1.html"
+                    itemscope=""
+                    itemtype="https://www.schema.org/SiteNavigationElement"
+                    >Updates</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="gallery.html"
+                    itemscope=""
+                    itemtype="https://www.schema.org/SiteNavigationElement"
+                    >Gallery</a
+                  >
+                </li>
 
-              <!-- <li class="nav-item header-custom-page"><a class="nav-link" href="{{CustomPage}}.html" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">{{CustomPageName}}</a></li> -->
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="contact.html"
-                  itemscope=""
-                  itemtype="https://www.schema.org/SiteNavigationElement"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-            <!-- </div> -->
+                <!-- <li class="nav-item header-custom-page"><a class="nav-link" href="{{CustomPage}}.html" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">{{CustomPageName}}</a></li> -->
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="contact.html"
+                    itemscope=""
+                    itemtype="https://www.schema.org/SiteNavigationElement"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
             <!--navbar-collapse-->
           </nav>
         </div>
@@ -287,6 +287,12 @@
               <h1>Welcome to Lorem Ipsum</h1>
             </div> -->
             <div class="desc">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -596,23 +602,6 @@
             itemscope=""
             itemtype="http://schema.org/BlogPosting"
           >
-            <div class="hide">
-              <span itemprop="author">Social Parsh</span>
-              <div
-                itemprop="publisher"
-                itemscope=""
-                itemtype="https://schema.org/Organization"
-              >
-                <span itemprop="name">#</span>
-                <div
-                  itemprop="logo"
-                  itemscope=""
-                  itemtype="http://schema.org/ImageObject"
-                >
-                  <img src="images/logo.png" alt="" itemprop="url" />
-                </div>
-              </div>
-            </div>
             <div class="updates-images">
               <img
                 src="images/Blogimg.jpg"
@@ -627,46 +616,6 @@
                 <a href="updatedetails.html" class="title" itemprop="headline"
                   >Lorem Ipsum Dolor</a
                 >
-                <button
-                  type="button"
-                  class="share-btn"
-                  id="update-share"
-                  aria-label="share"
-                  data-toggle="modal"
-                  data-target="#updatemodal"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="15"
-                    viewBox="-21 0 512 512"
-                    width="15"
-                  >
-                    <path
-                      d="m453.332031 85.332031c0 38.292969-31.039062 69.335938-69.332031 69.335938s-69.332031-31.042969-69.332031-69.335938c0-38.289062 31.039062-69.332031 69.332031-69.332031s69.332031 31.042969 69.332031 69.332031zm0 0"
-                    ></path>
-                    <path
-                      d="m384 170.667969c-47.0625 0-85.332031-38.273438-85.332031-85.335938 0-47.058593 38.269531-85.332031 85.332031-85.332031s85.332031 38.273438 85.332031 85.332031c0 47.0625-38.269531 85.335938-85.332031 85.335938zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.332031 0 29.398438 23.914062 53.335938 53.332031 53.335938s53.332031-23.9375 53.332031-53.335938c0-29.394531-23.914062-53.332031-53.332031-53.332031zm0 0"
-                    ></path>
-                    <path
-                      d="m453.332031 426.667969c0 38.289062-31.039062 69.332031-69.332031 69.332031s-69.332031-31.042969-69.332031-69.332031c0-38.292969 31.039062-69.335938 69.332031-69.335938s69.332031 31.042969 69.332031 69.335938zm0 0"
-                    ></path>
-                    <path
-                      d="m384 512c-47.0625 0-85.332031-38.273438-85.332031-85.332031 0-47.0625 38.269531-85.335938 85.332031-85.335938s85.332031 38.273438 85.332031 85.335938c0 47.058593-38.269531 85.332031-85.332031 85.332031zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.335938 0 29.394531 23.914062 53.332031 53.332031 53.332031s53.332031-23.9375 53.332031-53.332031c0-29.398438-23.914062-53.335938-53.332031-53.335938zm0 0"
-                    ></path>
-                    <path
-                      d="m154.667969 256c0 38.292969-31.042969 69.332031-69.335938 69.332031-38.289062 0-69.332031-31.039062-69.332031-69.332031s31.042969-69.332031 69.332031-69.332031c38.292969 0 69.335938 31.039062 69.335938 69.332031zm0 0"
-                    ></path>
-                    <path
-                      d="m85.332031 341.332031c-47.058593 0-85.332031-38.269531-85.332031-85.332031s38.273438-85.332031 85.332031-85.332031c47.0625 0 85.335938 38.269531 85.335938 85.332031s-38.273438 85.332031-85.335938 85.332031zm0-138.664062c-29.417969 0-53.332031 23.933593-53.332031 53.332031s23.914062 53.332031 53.332031 53.332031c29.421875 0 53.335938-23.933593 53.335938-53.332031s-23.914063-53.332031-53.335938-53.332031zm0 0"
-                    ></path>
-                    <path
-                      d="m135.703125 245.761719c-7.425781 0-14.636719-3.863281-18.5625-10.773438-5.824219-10.21875-2.238281-23.253906 7.980469-29.101562l197.949218-112.851563c10.21875-5.867187 23.253907-2.28125 29.101563 7.976563 5.824219 10.21875 2.238281 23.253906-7.980469 29.101562l-197.953125 112.851563c-3.328125 1.898437-6.953125 2.796875-10.535156 2.796875zm0 0"
-                    ></path>
-                    <path
-                      d="m333.632812 421.761719c-3.585937 0-7.210937-.898438-10.539062-2.796875l-197.953125-112.851563c-10.21875-5.824219-13.800781-18.859375-7.976563-29.101562 5.800782-10.238281 18.855469-13.84375 29.097657-7.976563l197.953125 112.851563c10.21875 5.824219 13.800781 18.859375 7.976562 29.101562-3.945312 6.910157-11.15625 10.773438-18.558594 10.773438zm0 0"
-                    ></path>
-                  </svg>
-                </button>
               </div>
               <p class="desc" itemprop="description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit
@@ -709,46 +658,6 @@
                 <a href="updatedetails.html" class="title" itemprop="headline"
                   >Lorem Ipsum Dolor</a
                 >
-                <button
-                  type="button"
-                  class="share-btn"
-                  id="update-share"
-                  aria-label="share"
-                  data-toggle="modal"
-                  data-target="#updatemodal"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="15"
-                    viewBox="-21 0 512 512"
-                    width="15"
-                  >
-                    <path
-                      d="m453.332031 85.332031c0 38.292969-31.039062 69.335938-69.332031 69.335938s-69.332031-31.042969-69.332031-69.335938c0-38.289062 31.039062-69.332031 69.332031-69.332031s69.332031 31.042969 69.332031 69.332031zm0 0"
-                    ></path>
-                    <path
-                      d="m384 170.667969c-47.0625 0-85.332031-38.273438-85.332031-85.335938 0-47.058593 38.269531-85.332031 85.332031-85.332031s85.332031 38.273438 85.332031 85.332031c0 47.0625-38.269531 85.335938-85.332031 85.335938zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.332031 0 29.398438 23.914062 53.335938 53.332031 53.335938s53.332031-23.9375 53.332031-53.335938c0-29.394531-23.914062-53.332031-53.332031-53.332031zm0 0"
-                    ></path>
-                    <path
-                      d="m453.332031 426.667969c0 38.289062-31.039062 69.332031-69.332031 69.332031s-69.332031-31.042969-69.332031-69.332031c0-38.292969 31.039062-69.335938 69.332031-69.335938s69.332031 31.042969 69.332031 69.335938zm0 0"
-                    ></path>
-                    <path
-                      d="m384 512c-47.0625 0-85.332031-38.273438-85.332031-85.332031 0-47.0625 38.269531-85.335938 85.332031-85.335938s85.332031 38.273438 85.332031 85.335938c0 47.058593-38.269531 85.332031-85.332031 85.332031zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.335938 0 29.394531 23.914062 53.332031 53.332031 53.332031s53.332031-23.9375 53.332031-53.332031c0-29.398438-23.914062-53.335938-53.332031-53.335938zm0 0"
-                    ></path>
-                    <path
-                      d="m154.667969 256c0 38.292969-31.042969 69.332031-69.335938 69.332031-38.289062 0-69.332031-31.039062-69.332031-69.332031s31.042969-69.332031 69.332031-69.332031c38.292969 0 69.335938 31.039062 69.335938 69.332031zm0 0"
-                    ></path>
-                    <path
-                      d="m85.332031 341.332031c-47.058593 0-85.332031-38.269531-85.332031-85.332031s38.273438-85.332031 85.332031-85.332031c47.0625 0 85.335938 38.269531 85.335938 85.332031s-38.273438 85.332031-85.335938 85.332031zm0-138.664062c-29.417969 0-53.332031 23.933593-53.332031 53.332031s23.914062 53.332031 53.332031 53.332031c29.421875 0 53.335938-23.933593 53.335938-53.332031s-23.914063-53.332031-53.335938-53.332031zm0 0"
-                    ></path>
-                    <path
-                      d="m135.703125 245.761719c-7.425781 0-14.636719-3.863281-18.5625-10.773438-5.824219-10.21875-2.238281-23.253906 7.980469-29.101562l197.949218-112.851563c10.21875-5.867187 23.253907-2.28125 29.101563 7.976563 5.824219 10.21875 2.238281 23.253906-7.980469 29.101562l-197.953125 112.851563c-3.328125 1.898437-6.953125 2.796875-10.535156 2.796875zm0 0"
-                    ></path>
-                    <path
-                      d="m333.632812 421.761719c-3.585937 0-7.210937-.898438-10.539062-2.796875l-197.953125-112.851563c-10.21875-5.824219-13.800781-18.859375-7.976563-29.101562 5.800782-10.238281 18.855469-13.84375 29.097657-7.976563l197.953125 112.851563c10.21875 5.824219 13.800781 18.859375 7.976562 29.101562-3.945312 6.910157-11.15625 10.773438-18.558594 10.773438zm0 0"
-                    ></path>
-                  </svg>
-                </button>
               </div>
               <p class="desc" itemprop="description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit
@@ -791,46 +700,6 @@
                 <a href="updatedetails.html" class="title" itemprop="headline"
                   >Lorem Ipsum Dolor</a
                 >
-                <button
-                  type="button"
-                  class="share-btn"
-                  id="update-share"
-                  aria-label="share"
-                  data-toggle="modal"
-                  data-target="#updatemodal"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="15"
-                    viewBox="-21 0 512 512"
-                    width="15"
-                  >
-                    <path
-                      d="m453.332031 85.332031c0 38.292969-31.039062 69.335938-69.332031 69.335938s-69.332031-31.042969-69.332031-69.335938c0-38.289062 31.039062-69.332031 69.332031-69.332031s69.332031 31.042969 69.332031 69.332031zm0 0"
-                    ></path>
-                    <path
-                      d="m384 170.667969c-47.0625 0-85.332031-38.273438-85.332031-85.335938 0-47.058593 38.269531-85.332031 85.332031-85.332031s85.332031 38.273438 85.332031 85.332031c0 47.0625-38.269531 85.335938-85.332031 85.335938zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.332031 0 29.398438 23.914062 53.335938 53.332031 53.335938s53.332031-23.9375 53.332031-53.335938c0-29.394531-23.914062-53.332031-53.332031-53.332031zm0 0"
-                    ></path>
-                    <path
-                      d="m453.332031 426.667969c0 38.289062-31.039062 69.332031-69.332031 69.332031s-69.332031-31.042969-69.332031-69.332031c0-38.292969 31.039062-69.335938 69.332031-69.335938s69.332031 31.042969 69.332031 69.335938zm0 0"
-                    ></path>
-                    <path
-                      d="m384 512c-47.0625 0-85.332031-38.273438-85.332031-85.332031 0-47.0625 38.269531-85.335938 85.332031-85.335938s85.332031 38.273438 85.332031 85.335938c0 47.058593-38.269531 85.332031-85.332031 85.332031zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.335938 0 29.394531 23.914062 53.332031 53.332031 53.332031s53.332031-23.9375 53.332031-53.332031c0-29.398438-23.914062-53.335938-53.332031-53.335938zm0 0"
-                    ></path>
-                    <path
-                      d="m154.667969 256c0 38.292969-31.042969 69.332031-69.335938 69.332031-38.289062 0-69.332031-31.039062-69.332031-69.332031s31.042969-69.332031 69.332031-69.332031c38.292969 0 69.335938 31.039062 69.335938 69.332031zm0 0"
-                    ></path>
-                    <path
-                      d="m85.332031 341.332031c-47.058593 0-85.332031-38.269531-85.332031-85.332031s38.273438-85.332031 85.332031-85.332031c47.0625 0 85.335938 38.269531 85.335938 85.332031s-38.273438 85.332031-85.335938 85.332031zm0-138.664062c-29.417969 0-53.332031 23.933593-53.332031 53.332031s23.914062 53.332031 53.332031 53.332031c29.421875 0 53.335938-23.933593 53.335938-53.332031s-23.914063-53.332031-53.335938-53.332031zm0 0"
-                    ></path>
-                    <path
-                      d="m135.703125 245.761719c-7.425781 0-14.636719-3.863281-18.5625-10.773438-5.824219-10.21875-2.238281-23.253906 7.980469-29.101562l197.949218-112.851563c10.21875-5.867187 23.253907-2.28125 29.101563 7.976563 5.824219 10.21875 2.238281 23.253906-7.980469 29.101562l-197.953125 112.851563c-3.328125 1.898437-6.953125 2.796875-10.535156 2.796875zm0 0"
-                    ></path>
-                    <path
-                      d="m333.632812 421.761719c-3.585937 0-7.210937-.898438-10.539062-2.796875l-197.953125-112.851563c-10.21875-5.824219-13.800781-18.859375-7.976563-29.101562 5.800782-10.238281 18.855469-13.84375 29.097657-7.976563l197.953125 112.851563c10.21875 5.824219 13.800781 18.859375 7.976562 29.101562-3.945312 6.910157-11.15625 10.773438-18.558594 10.773438zm0 0"
-                    ></path>
-                  </svg>
-                </button>
               </div>
               <p class="desc" itemprop="description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit
@@ -986,7 +855,7 @@
     </div>
     <!-- Updateds End-->
 
-    <hr />
+    <!-- <hr /> -->
 
     <!--Logo Slider sections-->
     <!-- <div class="logo-slider spad">
@@ -1258,6 +1127,7 @@
               </ul>
             </div>
           </div>
+
           <div class="footer-items moblie-spacing">
             <h4 class="title">Quick Links</h4>
             <div class="footer-links">
@@ -1283,6 +1153,7 @@
               </ul>
             </div>
           </div>
+
           <div class="footer-items">
             <h4 class="title">Get in Touch</h4>
             <div
@@ -1374,62 +1245,64 @@
     <!--Copy Right Sections-->
     <div class="copy-right">
       <div class="container">
-        <div class="translate" id="google_translate_element"></div>
-        <span class="copy-right-item"
-          >Copyright © 2023 Lorem Ipsum All rights reserved.</span
-        >
-        <span class="copy-right-item"
-          >Powered by
-          <a href="https://socialsparsh.com/" target="_blank" rel="noreferrer"
-            >Social Sparsh</a
-          ></span
-        >
+        <!-- <div class="translate" id="google_translate_element"></div> -->
+        <div class="copy-right-items">
+          <span class="copy-right-item"
+            >Copyright © 2023 Lorem Ipsum All rights reserved.</span
+          >
+          <span class="copy-right-item"
+            >Powered by
+            <a href="https://socialsparsh.com/" target="_blank" rel="noreferrer"
+              >Social Sparsh</a
+            ></span
+          >
+        </div>
       </div>
     </div>
     <!--Copy Right Sections-end-->
 
     <script type="text/javascript" src="./script.js"></script>
-    <!-- <script
-        type="text/javascript"
-        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-      ></script>
-      <script type="text/javascript" src="js/main.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <!-- <script type="text/javascript" src="js/main.min.js"></script> -->
+    <!--
+    <script>
+      const thisForm = document.getElementById("newsletter-form");
+      thisForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        var email = document.getElementById("email-input").value;
+        var formData = {
+          Id: 0,
+          emailAddress: email,
+          templateId: "{{TemplateId}}",
+          userId: "{{UserId}}",
+        };
+        const response = await fetch(
+          "https://api.socialsparsh.staging.weybee.in/WCMS/NewsletterSubscriber",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+          }
+        );
 
-      <script>
-        const thisForm = document.getElementById("newsletter-form");
-        thisForm.addEventListener("submit", async function (e) {
-          e.preventDefault();
-          var email = document.getElementById("email-input").value;
-          var formData = {
-            Id: 0,
-            emailAddress: email,
-            templateId: "{{TemplateId}}",
-            userId: "{{UserId}}",
-          };
-          const response = await fetch(
-            "https://api.socialsparsh.staging.weybee.in/WCMS/NewsletterSubscriber",
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(formData),
-            }
-          );
+        const result = await response.json();
+      });
+    </script> -->
 
-          const result = await response.json();
-        });
-      </script>
-
-      <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement(
-            {
-              pageLanguage: "en",
-              includedLanguages: "en,es,hi,ja,zh-CN",
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            },
-            "google_translate_element"
-          );
-        }
-      </script> -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,es,hi,ja,zh-CN",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
   </body>
 </html>
