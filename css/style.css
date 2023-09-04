@@ -39,6 +39,22 @@ ol {
   display: none;
 }
 
+.nav-inside {
+  padding: 32px 10px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: transparent;
+  z-index: 9999;
+}
+
+.navbar-scroll {
+  background: white;
+  transition: 0.5s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  top: 0px !important;
+}
+
 .nav-inside,
 .nav-items {
   padding: 0.5em;
