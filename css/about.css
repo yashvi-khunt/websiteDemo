@@ -34,14 +34,10 @@ ol {
 }
 
 #button,
-.navbar-toggler,
-.carousel-item {
+.navbar-toggler {
   display: none;
 }
 
-.main-header .container {
-  width: 100%;
-}
 .nav-inside {
   padding: 32px 10px;
   width: 100%;
@@ -180,15 +176,21 @@ ol {
   gap: 1em;
 }
 
-.our-vision {
+.our-vision,
+.our-mission {
   background: var(--bgcolor);
 }
 
-.our-vision .about-us-inside {
+.our-vision img,
+.our-mission img {
+  border-radius: 50%;
+}
+
+.our-vision .about-us-inside,
+.our-mission .about-us-inside {
   padding: 50px 0;
 }
 
-.counter,
 .newsletter {
   color: var(--second-color);
   padding: 2em;
@@ -196,8 +198,8 @@ ol {
   background-color: var(--bgcolor);
 }
 
-.our-serivces .container,
-.updates .container {
+.team-inside .container,
+.testimonials .container {
   padding-top: 100px;
   padding-bottom: 70px;
   display: flex;
@@ -207,65 +209,9 @@ ol {
   gap: 2em;
 }
 
-.our-serivces-main {
-  margin: 0 auto;
-  width: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
-}
-
-.our-serivces-items {
-  /* padding: 1em; */
-  border: 1px solid black;
-  border-radius: 10px;
-  transition: 0.5s;
-  overflow: hidden;
-  position: relative;
-}
-
-.our-serivces-items:hover {
-  transform: scale(1.05);
-  box-shadow: none;
-}
-
-.our-serivces-items img {
-  width: 360px;
-  height: 100%;
-  object-fit: fill;
-}
-
-.serivces-content {
-  line-height: 50px;
-  background-color: white;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  align-self: center;
-  transition: 0.5s;
-}
-
-.serivces-content h3 {
-  font-weight: 400;
-}
-
-.our-serivces-items:hover .serivces-content {
-  height: 100%;
-  display: flex;
-  background: linear-gradient(180deg, rgb(243, 75, 10, 0.8), rgb(0, 0, 0, 0.8));
-
-  align-items: center;
-  justify-content: center;
-}
-.our-serivces-items:hover .serivces-content a {
-  color: white;
-}
-
 .newsletter {
   border-radius: 50px 0 50px 0;
-  /* position: relative; */
+  position: relative;
 }
 .counter {
   border-radius: 50% 0 50% 0;
@@ -328,20 +274,7 @@ ol {
   /* transition: 0.5s ease; */
 }
 
-/* .form-row button:hover {
-  background: linear-gradient(
-    45deg,
-    var(--primary-color),
-    var(--second-color),
-    var(--primary-color)
-  );
-} */
-
-.hide {
-  display: none;
-}
-
-.updates-main {
+.team-main {
   margin: 0 auto;
   width: 90%;
   display: flex;
@@ -350,67 +283,49 @@ ol {
   gap: 2em;
 }
 
-.updates-items {
-  width: 360px;
-  height: 360px;
-  position: relative;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+.team-items {
+  width: 240px;
+  /* position: relative; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
-.updates-items:hover .updates-images {
-  transform: scale(1.2);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-.updates-items:hover .updates-content {
-  background: linear-gradient(180deg, rgb(243, 75, 10, 0.9), rgb(0, 0, 0, 0.9));
-  color: white;
-  position: absolute;
-  bottom: 0;
-  margin: 0 auto;
-  padding: 15px 15px;
-  z-index: 599;
+
+.team-content {
+  padding: 10px 0;
+  /* display: flex; */
   text-align: center;
-  font-family: var(--primary-font);
 }
-
-.updates-items:hover .updates-content a {
-  color: white;
+.team-items:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-
-.updates-images {
+.team-images {
   width: 100%;
   height: 100%;
-  object-fit: fill;
-  transition: 0.5s;
 }
 
-.updates-content {
-  transition: 0.5s;
-}
-
-.updates .title {
+.team-inside .title {
   color: var(--second-color);
-  display: block;
   padding-bottom: 10px;
-  line-height: 1.2em;
-  font-weight: 500;
-  font-size: 1.2em;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-.btn {
-  text-align: center;
-  display: block;
-  font-size: 20px;
-  padding: 15px;
-  color: white;
-  background: #000;
-  /* transition: 0.5s; */
+.team-content .designation {
+  font-size: 15px;
 }
-/* .btn:hover,
-.form-row button:hover {
-  /* background: linear-gradient(90deg, rgb(243, 75, 10, 1), rgb(0, 0, 0, 1)); 
-  background: radial-gradient(white, var(--primary-color));
-  color: #000;
+
+.testimonials {
+  background-image: url("../images/abc.jpg");
+}
+
+/* .testimonials-main {
+  margin: 0 auto;
+  width: 90%;
+} */
+
+/* .testimonials-items {
 } */
 
 .main-footer .container {
@@ -589,6 +504,7 @@ ol {
   .navbar-toggler {
     display: inline;
   }
+
   .slider-content {
     width: 70%;
   }
