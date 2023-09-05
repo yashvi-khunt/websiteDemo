@@ -38,15 +38,6 @@ ol {
   display: none;
 }
 
-.nav-inside {
-  padding: 32px 10px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background: transparent;
-  z-index: 9999;
-}
-
 .navbar-scroll {
   background: white;
   transition: 0.5s;
@@ -69,12 +60,29 @@ ol {
 }
 
 .navbar ul li a {
-  /* display: block; */
+  display: block;
   position: relative;
   padding: 5px;
   color: var(--primary-color);
 }
-.navbar ul li a:after {
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--bgcolor);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar ul li > a:after {
   content: "";
   width: 0%;
   height: 3px;
@@ -442,12 +450,38 @@ button[type="submit"]:hover {
   .collapse {
     display: none;
   }
+  .main-header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 1;
+  }
+
+  .navbar-scroll {
+    position: fixed;
+    transition: none;
+  }
+
+  .navbar-items {
+    width: 100%;
+    display: inline;
+    background-color: rgba(223, 223, 222, 0.9);
+    position: absolute;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+  }
+
   .nav-items {
     margin: 0 auto;
     width: 90%;
   }
+
   .navbar-toggler {
     display: inline;
+    position: relative;
+    border: none;
+    background: none;
   }
 
   .newsletter {
@@ -460,5 +494,6 @@ button[type="submit"]:hover {
 
   .footer-inside {
     grid-template-columns: 1fr;
+    padding: 0;
   }
 }

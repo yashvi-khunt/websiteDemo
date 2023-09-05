@@ -103,7 +103,6 @@
                 itemprop="image"
               />
             </a>
-
             <button
               class="navbar-toggler"
               type="button"
@@ -140,7 +139,7 @@
             </button>
           </div>
           <nav class="navbar" id="navbar_top">
-            <div class="collapse navbar-collapse" id="main_nav">
+            <div class="navbar-collapse collapse" id="main_nav">
               <ul class="navbar-items">
                 <li class="nav-item">
                   <a
@@ -160,32 +159,20 @@
                     >About Us</a
                   >
                 </li>
-                <li class="nav-item dropdown has-megamenu categorylist">
+                <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
                     href="#"
                     data-toggle="dropdown"
                     itemscope=""
                     itemtype="https://www.schema.org/SiteNavigationElement"
-                    >Products
+                    >Products &#x25BC;
                   </a>
-                  <!-- <div class="dropdown-menu">
-                      <a class="dropdown-item" href="productdetails.html"
-                        >lorem ipsum Dolor</a
-                      >
-                      <a class="dropdown-item" href="productdetails.html"
-                        >lorem ipsum Dolor</a
-                      >
-                      <a class="dropdown-item" href="productdetails.html"
-                        >lorem ipsum Dolor</a
-                      >
-                      <a class="dropdown-item" href="productdetails.html"
-                        >lorem ipsum Dolor</a
-                      >
-                      <a class="dropdown-item" href="productdetails.html"
-                        >lorem ipsum Dolor</a
-                      >
-                    </div> -->
+                  <div class="dropdown-content">
+                    <a href="productdetails.html">Product 1</a>
+                    <a href="productdetails.html">Product 2</a>
+                    <a href="productdetails.html">Product 3</a>
+                  </div>
                 </li>
                 <li class="nav-item">
                   <a
@@ -680,6 +667,29 @@
       </div>
     </div>
     <!--Copy Right Sections-->
+    <script>
+      const thisForm = document.getElementById("newsletter-form");
+      thisForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        var email = document.getElementById("email-input").value;
+        var formData = {
+          Id: 0,
+          emailAddress: email,
+          templateId: "{{TemplateId}}",
+          userId: "{{UserId}}",
+        };
+        const response = await fetch(
+          "https://api.socialsparsh.staging.weybee.in/WCMS/NewsletterSubscriber",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+          }
+        );
+
+        const result = await response.json();
+      });
+    </script>
     <script src="./script.js"></script>
   </body>
 </html>
