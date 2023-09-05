@@ -412,7 +412,6 @@ ol {
   );
 } */
 
-
 .updates-main {
   margin: 0 auto;
   width: 90%;
@@ -515,7 +514,7 @@ ol {
 .contact-desc {
   padding: 15px;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: 15px;
   color: #000;
 }
 
@@ -597,7 +596,7 @@ ol {
 .footer-links ul li a,
 .contact-desc a {
   color: #000;
-  font-size: 20px;
+  font-size: 15px;
 }
 .contact-info {
   padding: 15px;

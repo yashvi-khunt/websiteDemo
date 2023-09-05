@@ -135,7 +135,7 @@ ol {
   position: relative;
 }
 
-.banner-content .title:after{
+.banner-content .title:after {
   display: block;
   width: 50px;
   position: absolute;
@@ -143,7 +143,7 @@ ol {
   height: 3px;
   color: white;
   right: 50%;
-  transform: translate(50%,50%);
+  transform: translate(50%, 50%);
   background-color: white;
 }
 .about-us-inside {
@@ -311,11 +311,11 @@ ol {
   font-size: 15px;
 }
 
-.testimonials{
+.testimonials {
   position: relative;
 }
 
-.testimonials::before{
+.testimonials::before {
   content: "";
   position: absolute;
   top: 0;
@@ -327,7 +327,7 @@ ol {
 
 .testimonials .container {
   background-repeat: no-repeat;
-  background-image:url("../images/abc.jpg") ;
+  background-image: url("../images/abc.jpg");
   background-size: cover;
 }
 
@@ -344,19 +344,19 @@ ol {
   justify-content: center;
 }
 
-.carousel-item img, .carousel-item .corousel-content{
-  position:relative;
-  animation:animateright 0.4s;
+.carousel-item img,
+.carousel-item .corousel-content {
+  position: relative;
+  animation: animateright 0.4s;
   /* animation: animateleft 0.4s; */
 }
-.carousel-item img{
+.carousel-item img {
   width: 160px;
   height: 160px;
   border-radius: 5px;
 }
 
-
-.carousel-item .corousel-content{
+.carousel-item .corousel-content {
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -364,28 +364,44 @@ ol {
   /* justify-content: space-between; */
 }
 
-.carousel-item .corousel-content .designation{
-  font-weight:400;
+.carousel-item .corousel-content .designation {
+  font-weight: 400;
 }
 
-.animate-right{
-  animation:animateright 0.4s;
-  
+.animate-right {
+  animation: animateright 0.4s;
 }
 
-.animate-left{
+.animate-left {
   animation: animateleft 0.4s;
 }
 
-@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
-@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
-
-.hidden{
-   display: none !important;
+@keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
 }
 
+.hidden {
+  display: none !important;
+}
 
-.testi-control{
+.testi-control {
   width: 60%;
 }
 .main-control button svg {
@@ -405,7 +421,6 @@ ol {
 .main-control {
   display: flex;
   justify-content: space-between;
-  
 }
 /* onclick- animate left on left click else right */
 .main-control button {
@@ -454,13 +469,14 @@ ol {
 .contact-desc {
   padding: 15px;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: 15px;
   color: #000;
 }
 
 .footer-social {
   padding: 15px;
 }
+
 .footer-social ul {
   display: flex;
   gap: 10px;
@@ -536,7 +552,7 @@ ol {
 .footer-links ul li a,
 .contact-desc a {
   color: #000;
-  font-size: 20px;
+  font-size: 15px;
 }
 .contact-info {
   padding: 15px;
@@ -602,22 +618,22 @@ ol {
     display: inline;
   }
 
-
-  .testimonials-main .carousel-item{
+  .testimonials-main .carousel-item {
     flex-direction: column;
     gap: 10px;
   }
 
-  .carousel-item .corousel-content{
+  .carousel-item .corousel-content {
     gap: 5px;
     text-align: center;
   }
 
-  .carousel-item img{
+  .carousel-item img {
     border-radius: 50%;
   }
 
-  .testi-control, .testimonials-main{
+  .testi-control,
+  .testimonials-main {
     width: 80%;
   }
 
