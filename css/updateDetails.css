@@ -27,10 +27,42 @@ ol {
   list-style-type: none;
   text-decoration: none;
 }
-
 #button svg {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+  transform: rotate(90deg);
+}
+#button {
+  z-index: 2147483647;
+  display: block;
+  background: var(--bgcolor);
+  cursor: pointer;
+  padding: 5px 5px;
+  font-size: 5px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: all 0.1s;
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+#button:hover {
+  fill: white;
+  background-color: var(--primary-color);
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
 }
 
 #button,
@@ -195,9 +227,6 @@ ol {
   font-weight: 600;
 }
 
-.tags-items {
-  width: 60%;
-}
 .tags-items ul {
   display: flex;
   flex-wrap: wrap;
@@ -207,6 +236,16 @@ ol {
   border: 1px solid black;
   padding: 10px;
 }
+
+.tags-items ul li:hover {
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+.tags-items ul li:hover a {
+  color: white;
+}
+
 .share-social svg {
   fill: white;
   height: 15px;
@@ -221,7 +260,8 @@ ol {
 }
 
 .newsletter {
-  border-radius: 50px 0 50px 0;
+  /* border-radius: 50px 0 50px 0; */
+  border-bottom: 1px solid black;
   position: relative;
 }
 
@@ -239,6 +279,8 @@ ol {
 
 .form-row {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
   /* align-items: baseline; */
 }
@@ -278,8 +320,8 @@ ol {
 }
 .footer-inside svg {
   fill: white;
-  height: 25px;
-  width: 25px;
+  height: 17px;
+  width: 17px;
 }
 
 .footer-logo img {
@@ -290,25 +332,21 @@ ol {
 
 .footer-items .desc,
 .contact-desc {
-  padding: 15px;
+  padding: 5px;
   line-height: 1.5;
   font-size: 15px;
   color: #000;
 }
 
-.footer-social,
-.share-social,
-.tags-items {
+.footer-social {
   padding: 15px;
 }
-.footer-social ul,
-.share-social ul {
+.footer-social ul {
   display: flex;
   gap: 10px;
 }
 
 .footer-social ul li,
-.share-social ul li,
 .contact-icon,
 .content-desc {
   padding: 10px;
@@ -319,11 +357,11 @@ ol {
 
 /* on hover change color of svg */
 .footer-social ul li:hover,
-.share-social ul li:hover,
 .contact-icon:hover,
 .content-desc:hover {
   transform: scale(1.01);
-  background: radial-gradient(var(--second-color), var(--primary-color));
+  /* background: radial-gradient(var(--second-color), var(--primary-color)); */
+  background: var(--primary-color);
 }
 
 .footer-items .title {

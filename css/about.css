@@ -27,10 +27,42 @@ ol {
   list-style-type: none;
   text-decoration: none;
 }
-
 #button svg {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+  transform: rotate(90deg);
+}
+#button {
+  z-index: 2147483647;
+  display: block;
+  background: var(--bgcolor);
+  cursor: pointer;
+  padding: 5px 5px;
+  font-size: 5px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: all 0.1s;
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+#button:hover {
+  fill: white;
+  background-color: var(--primary-color);
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
 }
 
 #button,
@@ -230,7 +262,7 @@ ol {
 }
 
 .newsletter {
-  border-radius: 50px 0 50px 0;
+  border-bottom: 1px solid black;
   position: relative;
 }
 .counter {
@@ -252,6 +284,8 @@ ol {
 .form-row {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
   /* align-items: baseline; */
 }
 
@@ -328,12 +362,12 @@ ol {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
 }
 
 .testimonials .container {
   background-repeat: no-repeat;
-  background-image: url("../images/abc.jpg");
+  /* background-image: url("../images/abc.webp"); */
   background-size: cover;
 }
 
@@ -363,7 +397,7 @@ ol {
 }
 
 .carousel-item .corousel-content {
-  color: #fff;
+  /* color: #fff; */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -461,8 +495,8 @@ ol {
 }
 .footer-inside svg {
   fill: white;
-  height: 25px;
-  width: 25px;
+  height: 17px;
+  width: 17px;
 }
 
 .footer-logo img {
@@ -473,7 +507,7 @@ ol {
 
 .footer-items .desc,
 .contact-desc {
-  padding: 15px;
+  padding: 5px;
   line-height: 1.5;
   font-size: 15px;
   color: #000;
@@ -482,7 +516,6 @@ ol {
 .footer-social {
   padding: 15px;
 }
-
 .footer-social ul {
   display: flex;
   gap: 10px;
@@ -502,7 +535,8 @@ ol {
 .contact-icon:hover,
 .content-desc:hover {
   transform: scale(1.01);
-  background: radial-gradient(var(--second-color), var(--primary-color));
+  /* background: radial-gradient(var(--second-color), var(--primary-color)); */
+  background: var(--primary-color);
 }
 
 .footer-items .title {
@@ -613,6 +647,9 @@ ol {
 }
 
 @media (max-width: 600px) {
+  .banner-content .title {
+    font-size: 25px;
+  }
   .collapse {
     display: none;
   }
@@ -620,7 +657,7 @@ ol {
     width: 100%;
     position: relative;
     top: 0;
-    z-index: 1;
+    z-index: 777777;
   }
 
   .navbar-scroll {

@@ -29,8 +29,41 @@ ol {
 }
 
 #button svg {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+  transform: rotate(90deg);
+}
+#button {
+  z-index: 2147483647;
+  display: block;
+  background: var(--bgcolor);
+  cursor: pointer;
+  padding: 5px 5px;
+  font-size: 5px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: all 0.1s;
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+#button:hover {
+  fill: white;
+  background-color: var(--primary-color);
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
 }
 
 #button,
@@ -210,7 +243,7 @@ ol {
   width: 100%;
 }
 
-input[type="text"],
+.contact-form [type="text"],
 input[type="email"],
 select,
 textarea {
@@ -221,7 +254,7 @@ textarea {
   box-sizing: border-box;
   /* resize: vertical; */
 }
-button[type="submit"] {
+.contact-form button[type="submit"] {
   background-color: var(--second-color);
   color: white;
   padding: 12px 20px;
@@ -230,7 +263,7 @@ button[type="submit"] {
   cursor: pointer;
   width: 300px;
 }
-button[type="submit"]:hover {
+.contact-form button[type="submit"]:hover {
   background-color: var(--primary-color);
 }
 
@@ -242,10 +275,9 @@ button[type="submit"]:hover {
 }
 
 .newsletter {
-  border-radius: 50px 0 50px 0;
+  border-bottom: 1px solid black;
   position: relative;
 }
-
 .newsletter-inside {
   display: flex;
   gap: 20px;
@@ -261,6 +293,8 @@ button[type="submit"]:hover {
 .form-row {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
   /* align-items: baseline; */
 }
 
@@ -398,6 +432,7 @@ button[type="submit"]:hover {
   color: #000;
   font-size: 15px;
 }
+
 .contact-info {
   padding: 15px;
   display: flex;
@@ -447,6 +482,9 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 600px) {
+  .newsletter-inside {
+    flex-direction: column;
+  }
   .collapse {
     display: none;
   }
