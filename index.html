@@ -594,39 +594,48 @@
         <div class="content-type">
           <a href="#"><span>Brand</span> Basket</a>
         </div>
-        <div class="logo-slider-inner">
-          <!-- <div class="marquee-inner"> -->
-          <div class="logo-slider-items">
-            <img src="images/brand-1.webp" itemprop="image" alt="logo-sldier" />
-          </div>
-          <div class="logo-slider-items">
-            <img
-              src="images/brand-2.webp"
-              itemprop="image"
-              alt="logo-sldier"
-              height="100%"
-              width="100%"
-            />
-          </div>
-          <div class="logo-slider-items">
-            <img
-              src="images/brand-3.webp"
-              itemprop="image"
-              alt="logo-sldier"
-              height="100%"
-              width="100%"
-            />
-          </div>
-          <div class="logo-slider-items">
-            <img
-              src="images/brand-4.webp"
-              itemprop="image"
-              alt="logo-sldier"
-              height="100%"
-              width="100%"
-            />
-          </div>
+        <div class="logo-sldier-main">
+          <ul class="brands">
+            <!-- <div class="marquee-inner"> -->
+            <li class="brand-logo">
+              <img
+                src="images/brand-1.webp"
+                itemprop="image"
+                alt="logo-sldier"
+                height="100%"
+                width="100%"
+              />
+            </li>
+            <li class="brand-logo">
+              <img
+                src="images/brand-2.webp"
+                itemprop="image"
+                alt="logo-sldier"
+                height="100%"
+                width="100%"
+              />
+            </li>
+            <li class="brand-logo">
+              <img
+                src="images/brand-3.webp"
+                itemprop="image"
+                alt="logo-sldier"
+                height="100%"
+                width="100%"
+              />
+            </li>
+            <li class="brand-logo">
+              <img
+                src="images/brand-4.webp"
+                itemprop="image"
+                alt="logo-sldier"
+                height="100%"
+                width="100%"
+              />
+            </li>
+          </ul>
         </div>
+
         <!-- </div> -->
         <!-- <div class="control"></div> -->
       </div>
@@ -953,6 +962,17 @@
     <!--Copy Right Sections-end-->
 
     <script type="text/javascript" src="./script.js"></script>
+
+    <script type="text/javascript">
+      const brands = document.querySelector(".brands"),
+        total_brand = brands.children.length;
+
+      document.documentElement.style.setProperty("--total-brand", total_brand);
+
+      for (let i = 0; i < total_brand; i++) {
+        brands.appendChild(brands.children[i].cloneNode(true));
+      }
+    </script>
 
     <script type="text/javascript">
       let slideIndex = 1;
