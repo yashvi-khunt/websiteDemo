@@ -228,6 +228,10 @@ span {
   color: var(--primary-color);
 }
 
+.content-type a {
+  color: var(--second-color);
+}
+
 .product-detials .container {
   padding-top: 100px;
   padding-bottom: 70px;

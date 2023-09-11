@@ -378,23 +378,23 @@
         </div>
         <div class="counter-inside">
           <div class="count-up">
-            <div class="counter-count">560</div>
+            <div data-target="560" class="counter-count">560</div>
             <div class="counter-text">Lorem Ispsum Dolor</div>
           </div>
 
           <div class="count-up">
-            <div class="counter-count">200</div>
+            <div data-target="200" class="counter-count">200</div>
 
             <div class="counter-text">Lorem Ispsum Dolor</div>
           </div>
 
           <div class="count-up">
-            <div class="counter-count">350</div>
+            <div data-target="350" class="counter-count">350</div>
             <div class="counter-text">Lorem Ispsum Dolor</div>
           </div>
 
           <div class="count-up">
-            <div class="counter-count">900</div>
+            <div data-target="900" class="counter-count">900</div>
             <div class="counter-text">Lorem Ispsum Dolor</div>
           </div>
         </div>
@@ -945,7 +945,7 @@
     <!--Copy Right Sections-->
     <div class="copy-right">
       <div class="container">
-        <!-- <div class="translate" id="google_translate_element"></div> -->
+        <div class="translate" id="google_translate_element"></div>
         <div class="copy-right-items">
           <span class="copy-right-item"
             >Copyright © 2023 Lorem Ipsum All rights reserved.</span
@@ -1008,11 +1008,6 @@
       };
     </script>
 
-    <!-- <script
-      type="text/javascript"
-      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script> -->
-
     <script>
       const thisForm = document.getElementById("newsletter-form");
       thisForm.addEventListener("submit", async function (e) {
@@ -1036,8 +1031,11 @@
         const result = await response.json();
       });
     </script>
-
-    <!-- <script type="text/javascript">
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement(
           {
@@ -1048,6 +1046,31 @@
           "google_translate_element"
         );
       }
-    </script> -->
+    </script>
+
+    <script type="text/javascript">
+      const countFn = function (element, minCount) {
+        const target = element.innerHTML;
+        const inc = Math.round(target / minCount);
+        // const inc = Math.round(target / 1000);
+        let count = 0;
+        const counter = setInterval(function () {
+          if (count <= target) {
+            element.innerText = count;
+            count += inc;
+            console.log(count, minCount);
+          } else {
+            element.innerText = target;
+            clearInterval(counter);
+          }
+        }, 1);
+      };
+
+      const counters = Array.from(document.querySelectorAll(".counter-count"));
+
+      const countersCount = counters.map((ele) => parseInt(ele.textContent));
+      const minCount = Math.min(...countersCount);
+      for (let i = 0; i < counters.length; i++) countFn(counters[i], minCount);
+    </script>
   </body>
 </html>

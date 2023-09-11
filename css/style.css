@@ -9,8 +9,9 @@
   --second-font: "Mulish", sans-serif;
 
   --total-brand: 4;
-  --logo-width: 320px;
-  --total-logo-width: calc(var(--total-brand) * var(--total-logo-width) * 2);
+  --logo-width: calc(100vw / var(--total-brand));
+  --total-logo-width: calc(var(--total-brand) * var(--logo-width) * 2);
+  --animation-duration: calc(var(--total-brand) * 2s);
 }
 
 *,
@@ -305,7 +306,7 @@ span {
 
 .counter .container {
   padding: 50px 0;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -420,9 +421,6 @@ span {
   border-bottom: 1px solid black;
   /* position: relative; */
 }
-.counter {
-  border-radius: 50% 0 50% 0;
-}
 
 .newsletter-inside {
   display: flex;
@@ -535,21 +533,21 @@ span {
 .logo-sldier-main {
   /* margin: 0 auto; */
   /* padding: 20px 0; */
-  width: calc(var(--total-brand) * var(--logo-width));
-  /* width: 80%; */
-  border-radius: 130px;
+  /* width: calc(var(--total-brand) * var(--logo-width)); */
+  width: 100%;
+  /* border-radius: 130px; */
   display: flex;
   align-items: center;
   overflow: hidden;
-  height: 15rem;
-  border: 1px solid black;
+  height: 10rem;
+  /* border: 1px solid black; */
   /* box-shadow: 3px 3px 3px 3px black; */
 }
 
 .logo-sldier-main .brands {
   width: var(--total-logo-width);
   display: flex;
-  animation: slideLeft 10s linear infinite;
+  animation: slideLeft var(--animation-duration) linear infinite;
 }
 
 .logo-sldier-main:hover .brands {
@@ -558,14 +556,19 @@ span {
 
 @keyframes slideLeft {
   100% {
-    transform: translateX(calc(-100% / 2));
+    transform: translateX(calc(-50%));
   }
 }
 .logo-sldier-main .brands .brand-logo {
   width: var(--logo-width);
-  aspect-ratio: 172/ 85;
+  /* aspect-ratio: 172/ 85; */
   font-size: 2rem;
   text-align: center;
+}
+
+.logo-sldier-main .brands .brand-logo img {
+  width: 172px;
+  height: 85px;
 }
 .btn {
   text-align: center;
@@ -716,8 +719,15 @@ span {
   background-color: var(--bgcolor);
 }
 
-.copy-right .container .copy-right-items {
+.copy-right .container {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.copy-right .container .copy-right-items {
+  /* padding: 30px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -748,6 +758,9 @@ span {
 }
 
 @media (max-width: 600px) {
+  :root {
+    --logo-width: 172px;
+  }
   .collapse {
     display: none;
   }

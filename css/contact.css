@@ -227,6 +227,9 @@ span {
 .content-type span {
   color: var(--primary-color);
 }
+.content-type a {
+  color: var(--second-color);
+}
 
 .contact .container {
   margin: 0 auto;

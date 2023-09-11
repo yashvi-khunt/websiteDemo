@@ -228,6 +228,9 @@ span {
   color: var(--primary-color);
 }
 
+.content-type a {
+  color: var(--second-color);
+}
 .photo-gallery .container {
   padding-top: 100px;
   padding-bottom: 70px;

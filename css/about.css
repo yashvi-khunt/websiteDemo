@@ -251,7 +251,7 @@ span {
 }
 
 .content-type a {
-  color: #000;
+  color: var(--second-color);
 }
 
 .about-us-content .desc {
